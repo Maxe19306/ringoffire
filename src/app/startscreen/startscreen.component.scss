@@ -9,6 +9,11 @@
     img {
         height: 100vh;
     }
+    @media (max-width: 960px) {
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+    }
 }
 
 .startlabel-container {
@@ -19,12 +24,15 @@
     display: flex;
     justify-content: center;
     img {
-        width: 25vw;
+        width: 30vw;
         height: auto;
         object-fit: contain;
         &:hover {
             filter: brightness(1.2);
             cursor: pointer;
+        }
+        @media (max-width: 960px) {
+            width: 400px;
         }
     }
 }

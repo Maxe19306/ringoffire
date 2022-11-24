@@ -1,0 +1,24 @@
+.player-mobil {
+    display: flex;
+    background-color: orange;
+    width: 100px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: 2px solid transparent;
+    flex-direction: column;
+    align-items: center;
+    span {
+        font-size: 15px;
+    }
+    img {
+        width: 45px;
+        height: 45px;
+        object-fit: cover;
+        border-radius: 100%;
+        margin-top: 10px;
+    }
+}
+
+.playerActive {
+    border: 2px solid green !important;
+}

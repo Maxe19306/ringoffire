@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent implements OnInit {
-
+  @Input() image ='profilimage.png'; 
   @Input() name;
   @Input() playerActive: boolean = false;
 

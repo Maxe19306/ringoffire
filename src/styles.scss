@@ -4,9 +4,22 @@ html,
 body {
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@media (max-width: 720px) {
+    .hide-mobil {
+        display: none;
+    }
+}
+
+@media (min-width: 720px) {
+    .hide-desktop {
+        display: none !important;
+    }
 }

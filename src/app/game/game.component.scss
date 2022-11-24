@@ -14,6 +14,9 @@
     img {
         width: 130px;
         position: absolute;
+        @media (max-width: 300px) {
+            width: 90px;
+        }
     }
 }
 
@@ -26,19 +29,28 @@
 }
 
 .pick-card {
+    z-index: 500;
     transition: all 125ms ease-in-out;
     animation: pick-Card-Animation 1.2s ease-in-out;
     transform: scale(1.3) translateX(150px) translateY(-150px) rotate(-10deg);
+    @media (max-width: 300px) {
+        animation: pick-Card-Animation-mobil 1.2s ease-in-out;
+        transform: scale(1.3) translateX(100px) translateY(-150px) rotate(-10deg);
+    }
 }
 
 .played-Card {
     right: 25px;
     transform: scale(1.3) translateX(150px) translateY(-150px) rotate(-10deg);
+    @media (max-width: 300px) {
+        transform: scale(1.3) translateX(100px) translateY(-150px) rotate(-10deg);
+    }
 }
 
 .player-position {
     position: absolute;
     right: 0;
+    z-index: 1;
 }
 
 .button-add {
@@ -47,11 +59,38 @@
     bottom: 32px;
 }
 
+.scroll-container {
+    overflow-y: hidden;
+    overflow-x: auto;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    app-player-mobil {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
 .pin-bottom {
     position: absolute;
     bottom: 32px;
     left: 100px;
     right: 100px;
+    @media (max-width: 720px) {
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+app-player,
+app-player-mobil {
+    cursor: pointer;
+    &:hover {
+        filter: brightness(1.2);
+    }
 }
 
 @keyframes pick-Card-Animation {
@@ -67,4 +106,41 @@
     100% {
         transform: scale(1.3) translateX(150px) translateY(-150px) rotate(-10deg);
     }
+}
+
+@keyframes pick-Card-Animation-mobil {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.7);
+    }
+    60% {
+        transform: scale(1.7);
+    }
+    100% {
+        transform: scale(1.3) translateX(100px) translateY(-150px) rotate(-10deg);
+    }
+}
+
+.Endscreen {
+    display: flex;
+    align-items: center;
+    img {
+        width: 100vw;
+        height: 100vh;
+        max-width: 100%;
+    }
+    .example-button-row {
+        position: absolute;
+        background-color: white;
+        border-radius: 8px;
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+.preload-image {
+    opacity: 0;
+    z-index: -9999;
 }
