@@ -1,13 +1,4 @@
 {
-  "targets": {
-    "ringoffire-e0457": {
-      "hosting": {
-        "ringoffire": [
-          "ringoffire-e0457"
-        ]
-      }
-    }
-  },
   "projects": {
     "default": "ringoffire-e0457"
   }
